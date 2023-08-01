@@ -1,0 +1,14 @@
+This project was created so that guests could rate our projects at Japan MUN Project organised by our school, It was to be run on an android tablet at doorstep asking the guests about their views. Made using python, kivymd, kivy.
+
+It builds and runs on Linux:
+- Install Dependencies:
+    pip install -r requirements.txt
+
+- For building on android
+    - Connect your phone with ADB
+    - Use build.sh to build and run on your android phone
+
+- For running on linux pc
+    - Use run.sh
+
+

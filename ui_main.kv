@@ -1,0 +1,51 @@
+MDScreen:
+    name: "Main"
+    MDLabel:
+        text: "Please share your experience"
+        font_style: "H2"
+        pos_hint: {'center_x': .5, 'center_y': .9}
+
+    MDTextField:
+        hint_text: "Please enter your name"
+        pos_hint: {'center_x': .5, 'center_y':.7}
+        size_hint_x: 0.9
+        mode: "rectangle"
+        max_text_length: 64
+        font_size: 60
+    MDBoxLayout:
+        pos_hint: {'center_x': .75, 'center_y':.95}
+        width: self.minimum_width
+        orientation: 'horizontal'
+        spacing: 10
+        MDIconButton:
+            icon: "star-outline"
+            icon_size: "50sp"
+        MDIconButton:
+            icon: "star-outline"
+            icon_size: "50sp"
+        MDIconButton:
+            icon: "star-outline"
+            icon_size: "50sp"
+        MDIconButton:
+            icon: "star-outline"
+            icon_size: "50sp"
+        MDIconButton:
+            icon: "star-outline"
+            icon_size: "50sp"
+    MDTextField:
+        hint_text: "Review"
+        pos_hint: {'center_x': .5, 'center_y':.35}
+        size_hint_x: 0.9
+        mode: "rectangle"
+        max_text_length: 200
+        font_size: 60
+        multiline: True
+        max_height: "100dp"
+    MDRectangleFlatIconButton:
+        pos_hint: {'center_x': .5, 'center_y':.1}
+        icon: "send"
+        text: "Submit"
+        font_size: 64
+        icon_size: 64
+        line_width: 3
+
