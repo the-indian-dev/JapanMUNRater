@@ -6,6 +6,7 @@ MDScreen:
         pos_hint: {'center_x': .5, 'center_y': .9}
 
     MDTextField:
+        id: name
         hint_text: "Please enter your name"
         pos_hint: {'center_x': .5, 'center_y':.7}
         size_hint_x: 0.9
@@ -18,21 +19,32 @@ MDScreen:
         orientation: 'horizontal'
         spacing: 10
         MDIconButton:
+            id: star1
             icon: "star-outline"
             icon_size: "50sp"
+            on_release: app.on_rate(1)
         MDIconButton:
+            id: star2
             icon: "star-outline"
             icon_size: "50sp"
+            on_release: app.on_rate(2)
         MDIconButton:
+            id: star3
             icon: "star-outline"
             icon_size: "50sp"
+            on_release: app.on_rate(3)
         MDIconButton:
+            id: star4
             icon: "star-outline"
             icon_size: "50sp"
+            on_release: app.on_rate(4)
         MDIconButton:
+            id: star5
             icon: "star-outline"
             icon_size: "50sp"
+            on_release: app.on_rate(5)
     MDTextField:
+        id: review
         hint_text: "Review"
         pos_hint: {'center_x': .5, 'center_y':.35}
         size_hint_x: 0.9
@@ -40,12 +52,15 @@ MDScreen:
         max_text_length: 200
         font_size: 60
         multiline: True
+        helper_text: "Optional"
         max_height: "100dp"
     MDRectangleFlatIconButton:
+        id: submit
         pos_hint: {'center_x': .5, 'center_y':.1}
         icon: "send"
         text: "Submit"
         font_size: 64
         icon_size: 64
         line_width: 3
+        on_release: app.push_data(name.text, review.text)
 
